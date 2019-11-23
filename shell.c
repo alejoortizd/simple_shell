@@ -1,4 +1,3 @@
-#include "holberton.h"
 int main (char argc, char **argv, char **envp)
 {
 	char *buf = NULL, *token, **cp, *cpbuf = NULL, *michel, michel2[99];
