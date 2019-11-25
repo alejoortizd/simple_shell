@@ -63,7 +63,9 @@ char *path(char av[],  char *envp[])
         struct stat st;
 
         if (stat(av, &st) == 0)
-		return (av);
+        {
+                return (av);
+        }
         for (i = 0; envp[i] != NULL; i++)
                 if (strncmp(envp[i], "PATH", 4) == 0)
                         break;
@@ -72,7 +74,6 @@ char *path(char av[],  char *envp[])
         for (i = 0; token != NULL; i++)
         {
                 pathDir = malloc((strlen(token) + strlen(av) + 2) * sizeof(char\
-					 ));
                 strcat(pathDir, token);
                 if (pathDir[i - 1] != '/')
                         strcat(pathDir, "/");
@@ -82,9 +83,7 @@ char *path(char av[],  char *envp[])
                         return (pathDir);
                 }
                 free(pathDir);
-
                 token = strtok(NULL, ":=");
         }
-
 	return (0);
 }
