@@ -16,7 +16,7 @@ int main (int argc, char **argv, char **envp)
 		{
 			n == -1 && inter == 1 ? printf("\n") : n;
 			free(buf);
-			exit(0);
+			exit(127);
 		}
 		if (n > 1)
 		{
