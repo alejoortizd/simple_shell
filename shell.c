@@ -16,7 +16,7 @@ int main (int argc, char **argv, char **envp)
 		{
 			n == -1 && inter == 1 ? printf("\n") : n;
 			free(buf);
-			exit(127);
+			return (127);
 		}
 		if (n > 1)
 		{
@@ -82,9 +82,9 @@ char *path(char av[],  char *envp[])
                         return (pathDir);
                 }
                 free(pathDir);
-
                 token = strtok(NULL, ":=");
         }
+		free(tmp);
 
 	return (0);
 }

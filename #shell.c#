@@ -1,7 +1,7 @@
 #include "holberton.h"
 int main (int argc, char **argv, char **envp)
 {
-	char *buf = NULL, *token, *cp[64],  *michel, michel2[99];
+	char *buf = NULL, *token, *cp[64],  *pth, michel2[99];
 	size_t size = 0;
 	int i, st, michel1 = 1, inter = 1;
 	ssize_t n;
@@ -16,7 +16,7 @@ int main (int argc, char **argv, char **envp)
 		{
 			n == -1 && inter == 1 ? printf("\n") : n;
 			free(buf);
-			exit(0);
+			return (127);
 		}
 		if (n > 1)
 		{
@@ -35,8 +35,8 @@ int main (int argc, char **argv, char **envp)
 			ch = fork();
 			if(ch == 0)
 			{
-				michel = path(cp[0], envp);
-				if(execve(michel, cp, envp) == -1)
+				pth = path(cp[0], envp);
+				if(execve(pth, cp, envp) == -1)
 				{
 					sprintf(michel2, "%s: %d: %s: not found\n", argv[0], michel1, cp[0]);
 					write(STDERR_FILENO, &michel2, strlen(michel2));
@@ -49,7 +49,7 @@ int main (int argc, char **argv, char **envp)
 				wait(&st);
 			}
 		} michel1++;
-	} while (1);
+	} while (3);
 	putchar('\n');
 	free(buf);
 	exit(0);
@@ -59,13 +59,11 @@ char *path(char av[],  char *envp[])
 {
         int i = 0;
         char *tmp, *token;
-        static char *pathDir;
+        static char *pthd;
         struct stat st;
 
         if (stat(av, &st) == 0)
-        {
-                return (av);
-        }
+		return (av);
         for (i = 0; envp[i] != NULL; i++)
                 if (strncmp(envp[i], "PATH", 4) == 0)
                         break;
@@ -73,17 +71,20 @@ char *path(char av[],  char *envp[])
         token = strtok(tmp, ":=");
         for (i = 0; token != NULL; i++)
         {
-                pathDir = malloc((strlen(token) + strlen(av) + 2) * sizeof(char\
-                strcat(pathDir, token);
-                if (pathDir[i - 1] != '/')
-                        strcat(pathDir, "/");
-                strcat(pathDir, av);
-                if (stat(pathDir, &st) == 0)
+                pthd = malloc((strlen(token) + strlen(av) + 2) * sizeof(char\
+					 ));
+                strcat(pthd, token);
+                if (pthd[i - 1] != '/')
+                        strcat(pthd, "/");
+                strcat(pthd, av);
+                if (stat(pthd, &st) == 0)
                 {
-                        return (pathDir);
+                        return (pthd);
                 }
-                free(pathDir);
+                free(pthd);
                 token = strtok(NULL, ":=");
         }
+		free(tmp);
+
 	return (0);
 }
