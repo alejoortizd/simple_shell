@@ -88,8 +88,3 @@ Add additional notes about how to deploy this on a live system
 Simple_shell has an open source license [Open Source Definition](https://opensource.org/osd) — in brief, they allow software to be freely used, modified, and shared
 
 ## Acknowledgments
-
-* Michelle
-* Arturo
-* Gonzalo
-* Alejandro
