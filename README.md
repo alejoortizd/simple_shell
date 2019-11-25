@@ -49,17 +49,21 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 The shell works like this in interactive mode:
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-$ ./hsh
-($) /bin/ls
-hsh main.c shell.c
-($)
-($) exit
-$
+$ ./shell
+#Cisfun$ ls -lt
+
+total 48
+
+-rw-rw-r-- 1 vagrant vagrant  44 Nov 25 20:24 AUTHORS
+-rwxrwxr-x 1 vagrant vagrant 13673 Nov 25 20:22 shell
+-rw-rw-r-- 1 vagrant vagrant  2011 Nov 25 20:22 shell.c
+-rwxrw-r-- 1 vagrant vagrant  1924 Nov 25 20:22 man_1_simple_shell
+-rw-rw-r-- 1 vagrant vagrant 319 Nov 25 18:34 holberton.h
+drwxrwxr-x 2 vagrant vagrant  4096 Nov 25 18:34 shell_test_suite
+-rw-rw-r-- 1 vagrant vagrant  2571 Nov 25 17:45 README.md
+
+#Cisfun$
 ```
 
 
