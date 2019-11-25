@@ -47,7 +47,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 ## Running the tests
 
-The shell works like this in interactive mode:
+The shell works like this on interactive mode:
 
 ```
 $ ./shell
