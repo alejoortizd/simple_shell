@@ -17,7 +17,7 @@ int main(int argc, char **argv, char **envp)
 	(void) argc;
 	isatty(0) == 0 ? inter = 0 : inter;
 	do {
-		inter == 1 ? printf("#Cisfun$ ") : inter;
+		inter == 1 ? printf("#cisfun$ ") : inter;
 		n = getline(&buf, &size, stdin);
 		if (n == -1)
 		{
@@ -55,7 +55,7 @@ int main(int argc, char **argv, char **envp)
 				wait(&st);
 		} ct++;
 	} while (1);
-	putchar('\n');
+	_putchar('\n');
 	free(buf);
 	exit(0);
 }
