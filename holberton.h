@@ -12,7 +12,8 @@
 #include <string.h>
 #include <errno.h>
 
-char *path(char av[],  char *envp[]);
 int _putchar(char s);
+char *_strcat(char *dest, char *src);
+char *path(char av[],  char *envp[]);
 
 #endif /* _HOLBERTON_H_ */
