@@ -27,7 +27,7 @@ int main(int argc, char **argv, char **envp)
 		}
 		if (n > 1)
 		{
-			if (strncmp(buf, "exit", 4) == 0)
+			if (_strcmp(buf, "exit") == 0)
 				free(buf), exit(0);
 			token = strtok(buf, " \t\n");
 			for (i = 0; token != NULL; i++)

@@ -6,14 +6,15 @@
  * @n: Is the parameter to be checked
  * Return: Always 0 (Success)
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	int g, m;
 
 	for (g = 0; dest[g] != '\0'; g++)
 		;
-	for (m = 0; m < n && src[m] != '\0'; m++, g++)
-		dest[g] = src[m];
+	for (m = 0; src[m] != '\0'; m++)
+		dest[g + m] = src[m];
+	dest[g + m] = '\0';
 	return (dest);
 }
 /**
