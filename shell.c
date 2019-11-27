@@ -23,7 +23,7 @@ int main(int argc, char **argv, char **envp)
 		{
 			n == -1 && inter == 1 ? write(1, "\n", 2) : n;
 			free(buf);
-			return (127);
+			return (0);
 		}
 		if (n > 1)
 		{
@@ -41,7 +41,7 @@ int main(int argc, char **argv, char **envp)
 				{
 					dprintf(STDERR_FILENO, "%s: %d: %s: not found\n", argv[0], ct, cp[0]);
 					free(buf);
-					exit(EXIT_FAILURE);
+					exit(127);
 				}
 			}
 			if (ch > 0)
