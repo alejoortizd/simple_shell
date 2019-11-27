@@ -26,7 +26,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 Step by step how to run simple_shell
 
-*First of all clone the repository* 
+*First of all clone the repository*
 
 ```
 git clone "https://github.com/daod2003/simple_shell.git"
@@ -47,7 +47,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 ## Running the tests
 
-The shell works like this on interactive mode:
+The shell works like this in interactive mode:
 
 ```
 $ ./shell
@@ -63,13 +63,8 @@ total 48
 drwxrwxr-x 2 vagrant vagrant  4096 Nov 25 18:34 shell_test_suite
 -rw-rw-r-- 1 vagrant vagrant  2571 Nov 25 17:45 README.md
 
-#Cisfun$
+#cisfun$
 ```
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -78,10 +73,9 @@ Add additional notes about how to deploy this on a live system
 
 
 ## Authors
-* **Oscar Rodriguez** - [Github](https://github.com/oscarmrt)
-* **Daniel Quintero** - [Github](https://github.com/dgquintero)
-* **David Ortiz** - [Github](https://github.com/daod2003)
-
+* **Oscar Rodriguez** - [Github](https://github.com/oscarmrt) - [Twitter](https://twitter.com/OscaRT07)
+* **Daniel Quintero** - [Github](https://github.com/dgquintero) - [Twitter](https://twitter.com/danielq02)
+* **David Ortiz** - [Github](https://github.com/daod2003) - [Twitter](https://twitter.com/alejoortizd)
 
 ## License
 
