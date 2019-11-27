@@ -7,18 +7,18 @@
 .\" Use .Nm macro to designate other names for the documented program.
 
 .Sh SYNOPSIS             \" Section Header - required - don't modify
-.Nm ./shell 
+.Nm ./test 
 .br 
 
 .Sh DESCRIPTION          \" Section Header - required - don't modify
-.Nm When you run the shell ./shell on the terminal, the shell issues a command prompt (cisfun$), where you can type your input and is goint to be executed when you hit Enter. The output or the result that you asked for, will be displayed on the terminal.
+.Nm When you run the shell ./test on the terminal, the shell issues a command prompt (cisfun$), where you can type your input and is goint to be executed when you hit Enter. The output or the result that you asked for, will be displayed on the terminal.
 .Sh EXAMPLE
 .Nm
-Is a command line interpreter 
+Is a command line interpreter
 .Ar E.x: \" Inserts a space
 
 .br
- $ ./shell
+ $ ./test
 .br
 #cisfun$ ls
 .br
@@ -35,6 +35,16 @@ This the the file that contains the authors of the proyect.
 This is the file that contains the shell
 .It man_1_simple_shell
 This file has the description of the the shell and how it works.
+.It path.c
+This file has the funtion to recognize the path.
+.It _putchar
+This file has the function putchar
+.It shell.c
+This file has the main function for the shell
+.It strfuncs2.c
+This file has the str functions
+.It strfuncs.c
+This file has another str functions
 
 .El                      \" Ends the list
 .Sh AUTHOR
