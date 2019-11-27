@@ -14,7 +14,9 @@
 
 int _putchar(char s);
 char *_strcat(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
+int _strncmp(char *s1, char *s2, int n);
 char *path(char av[],  char *envp[]);
+char *_strdup(char *str);
+int _strlen(char *s);
 
 #endif /* _HOLBERTON_H_ */
