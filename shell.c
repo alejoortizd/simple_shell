@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv, char **envp)
 {
-	char *buf = NULL, *token, *cp[64],  *pth, pt[99];
+	char *buf = NULL, *token, *cp[64],  *pth;
 	size_t size = 0;
 	int i, st, ct = 1, inter = 1;
 	ssize_t n;
@@ -39,8 +39,7 @@ int main(int argc, char **argv, char **envp)
 				pth = path(cp[0], envp);
 				if (execve(pth, cp, envp) == -1)
 				{
-					sprintf(pt, "%s: %d: %s: not found\n", argv[0], ct, cp[0]);
-					write(STDERR_FILENO, &pt, strlen(pt));
+					dprintf(STDERR_FILENO, "%s: %d: %s: not found\n", argv[0], ct, cp[0]);
 					free(buf);
 					exit(EXIT_FAILURE);
 				}
