@@ -2,9 +2,19 @@
 
 A shell is a command line interpreter that takes an input in form of commands, processes it, and then gives an output.
 
+## Table of contents
+
+- 1. [Getting Started](#Getting-Started)
+- 1.1. [Prerequisites](#Prerequisites)
+- 1.2. [Installing](#Installing)
+- 2. [Running the tests](#Running-the-tests)
+- 3. [Built With](#Built-With)
+- 4. [Authors](#Authors)
+- 5. [License](#License)
+- 6. [Acknowledgments](#Acknowledgments)
 ## Getting Started
 
-When you run the shell ./simple_shell on the terminal, the shell issues a command prompt (cisfun$), where you can type your input and is goint to be executed when you hit Enter. The output or the result that you asked for, will be displayed on the terminal.
+When you run the shell ./test on the terminal, the shell issues a command prompt (cisfun$), where you can type your input and is goint to be executed when you hit Enter. The output or the result that you asked for, will be displayed on the terminal.
 
 ### Prerequisites
 
@@ -16,10 +26,10 @@ When you run the shell ./simple_shell on the terminal, the shell issues a comman
 -   Your code should use the  `Betty`  style. It will be checked using  [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl")  and  [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
 -   No more than 5 functions per file
 -   All your header files should be include guarded
--   Use system calls only when you need to ([why?](https://intranet.hbtn.io/rltoken/StgX3y26fwPNV_DqlZLErw "why?"))
+-   Use system calls only when you need to
 
 ```
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+gcc -Wall -Werror -Wextra -pedantic *.c -o test
 ```
 
 ### Installing
@@ -42,7 +52,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 *Run it on interactive mode*
 ```
-./hsh
+./test
 ```
 
 ## Running the tests
@@ -50,26 +60,46 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 The shell works like this in interactive mode:
 
 ```
-$ ./shell
+$ ./test
 #Cisfun$ ls -lt
-
-total 48
-
--rw-rw-r-- 1 vagrant vagrant  44 Nov 25 20:24 AUTHORS
--rwxrwxr-x 1 vagrant vagrant 13673 Nov 25 20:22 shell
--rw-rw-r-- 1 vagrant vagrant  2011 Nov 25 20:22 shell.c
--rwxrw-r-- 1 vagrant vagrant  1924 Nov 25 20:22 man_1_simple_shell
--rw-rw-r-- 1 vagrant vagrant 319 Nov 25 18:34 holberton.h
+total 64
+-rw-rw-r-- 1 vagrant vagrant  3208 Nov 27 20:36 README.md
+-rw-rw-r-- 1 vagrant vagrant   145 Nov 27 18:45 _putchar.c
+-rw-rw-r-- 1 vagrant vagrant  1099 Nov 27 18:45 shell.c
+-rw-rw-r-- 1 vagrant vagrant   468 Nov 27 16:58 holberton.h
+-rw-rw-r-- 1 vagrant vagrant  1006 Nov 27 16:58 path.c
+-rw-rw-r-- 1 vagrant vagrant   751 Nov 27 16:58 strfuncs2.c
+-rw-rw-r-- 1 vagrant vagrant   609 Nov 27 16:58 strfuncs.c
+-rwxrwxr-x 1 vagrant vagrant 13648 Nov 27 16:58 test
+-rw-rw-r-- 1 vagrant vagrant   243 Nov 27 15:26 AUTHORS
+-rwxrw-r-- 1 vagrant vagrant   275 Nov 26 20:18 make_authors
+-rwxrw-r-- 1 vagrant vagrant  1544 Nov 26 01:03 man_1_simple_shell
 drwxrwxr-x 2 vagrant vagrant  4096 Nov 25 18:34 shell_test_suite
--rw-rw-r-- 1 vagrant vagrant  2571 Nov 25 17:45 README.md
 
 #cisfun$
 ```
+No interactive mode:
 
+```
+$ echo ls | ./test
+
+total 64
+-rw-rw-r-- 1 vagrant vagrant  3208 Nov 27 20:36 README.md
+-rw-rw-r-- 1 vagrant vagrant   145 Nov 27 18:45 _putchar.c
+-rw-rw-r-- 1 vagrant vagrant  1099 Nov 27 18:45 shell.c
+-rw-rw-r-- 1 vagrant vagrant   468 Nov 27 16:58 holberton.h
+-rw-rw-r-- 1 vagrant vagrant  1006 Nov 27 16:58 path.c
+-rw-rw-r-- 1 vagrant vagrant   751 Nov 27 16:58 strfuncs2.c
+-rw-rw-r-- 1 vagrant vagrant   609 Nov 27 16:58 strfuncs.c
+-rwxrwxr-x 1 vagrant vagrant 13648 Nov 27 16:58 test
+-rw-rw-r-- 1 vagrant vagrant   243 Nov 27 15:26 AUTHORS
+-rwxrw-r-- 1 vagrant vagrant   275 Nov 26 20:18 make_authors
+-rwxrw-r-- 1 vagrant vagrant  1544 Nov 26 01:03 man_1_simple_shell
+drwxrwxr-x 2 vagrant vagrant  4096 Nov 25 18:34 shell_test_suite
+```
 ## Built With
 
 * [C]([https://en.wikipedia.org/wiki/C_(programming_language)](https://en.wikipedia.org/wiki/C_(programming_language))) - Programming language.
-
 
 
 ## Authors
@@ -82,3 +112,4 @@ drwxrwxr-x 2 vagrant vagrant  4096 Nov 25 18:34 shell_test_suite
 Simple_shell has an open source license [Open Source Definition](https://opensource.org/osd) — in brief, they allow software to be freely used, modified, and shared
 
 ## Acknowledgments
+Big thanks to Michelle Molina, Arturo Victoria and Gonzalo Gomez for helping us. 
