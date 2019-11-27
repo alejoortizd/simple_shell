@@ -1,0 +1,26 @@
+#include "holberton.h"
+/**
+ * _strcmp - Entry point
+ * @s1: Is the parameter to be checked
+ * @s2: Is the parameter to be checked
+ * @n: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+
+if ((access(tok,  F_OK | X_OK) == 0) && ((st.st_mode & S_IFMT) == S_IFREG))
+{
+	return (statu);
+}
+else
+{
+	if ((st.st_mode & S_IFMT) == S_IFDIR)
+	{
+		perror(*av);
+		return (126);
+	}
+	if (access(tok,  F_OK) != 0)
+		perror(*av);
+	else if (access(tok, X_OK) != 0)
+		perror(*av);
+	return (127);
+}
